@@ -7,11 +7,13 @@ Feature: Grounds
     Given the coffee machine is started
     And I handle everything except the grounds
 
-  Scenario: Message "Empty grounds" is displayed after 30 coffees are taken
+  @priority-high
+  Scenario: Message "Empty grounds" is displayed after 30 coffees are taken (uid:a7e8ed1e-d612-49a8-9509-277748385988)
     When I take "30" coffees
     Then message "Empty grounds" should be displayed
 
-  Scenario: When the grounds are emptied, message is removed
-    Given I take "30" coffees
-    When I empty the coffee grounds
+  @priority-medium
+  Scenario: When the grounds are emptied, message is removed (uid:1bd9560f-7c62-461e-a613-91ed0720217e)
+    When I take "30" coffees
+    And I empty the coffee grounds
     Then message "Ready" should be displayed

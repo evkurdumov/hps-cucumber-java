@@ -7,18 +7,21 @@ Feature: Beans
     Given the coffee machine is started
     And I handle everything except the beans
 
-  Scenario: Message "Fill beans" is displayed after 38 coffees are taken
+  @priority-high
+  Scenario: Message "Fill beans" is displayed after 38 coffees are taken (uid:a18055e4-20a0-44e5-9f9b-5585068f5445)
     When I take "38" coffees
     Then message "Fill beans" should be displayed
 
-  Scenario: It is possible to take 40 coffees before there is really no more beans
-    Given I take "40" coffees
+  @priority-low
+  Scenario: It is possible to take 40 coffees before there is really no more beans (uid:7b20354c-8a1b-40aa-8eb9-83948dcff7ca)
+    When I take "40" coffees
     Then coffee should be served
     When I take a coffee
     Then coffee should not be served
     And message "Fill beans" should be displayed
 
-  Scenario: After adding beans, the message "Fill beans" disappears
-    Given I take "40" coffees
-    When I fill the beans tank
+  @priority-high
+  Scenario: After adding beans, the message "Fill beans" disappears (uid:7c98a01c-a83e-46fc-a737-7550ba98df0e)
+    When I take "40" coffees
+    And I fill the beans tank
     Then message "Ready" should be displayed
