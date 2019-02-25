@@ -1,7 +1,6 @@
 # hps-cucumber-java
 
-[![Build Status](https://travis-ci.org/hiptest/hps-cucumber-java.svg?branch=master)](https://travis-ci.org/hiptest/hps-cucumber-java)
-
+[![Build Status](https://travis-ci.com/evkurdumov/hps-cucumber-java.svg?branch=master)](https://travis-ci.com/evkurdumov/hps-cucumber-java)
 Hiptest publisher samples with Cucumber/Java
 
 In this repository you'll find tests generated in Cucumber/Java format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
@@ -39,4 +38,3 @@ The SUT implementation can be seen in [``src/main/java/com/coffeemachine/CoffeeM
 The test report is generated in ```target/cuke-results-junit.xml```
 
 
-[![Build Status](https://travis-ci.com/evkurdumov/hps-cucumber-java.svg?branch=master)](https://travis-ci.com/evkurdumov/hps-cucumber-java)
