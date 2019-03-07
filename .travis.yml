@@ -7,8 +7,13 @@ before_install:
   - gem install hiptest-publisher
   - "hiptest-publisher -c cucumber-java.conf --only=features,step_definitions --test-run-id=238698"
 
+
 script:
   - mvn test
 
 after_script:
   - hiptest-publisher -c cucumber-java.conf --push=target/cuke-results.json --test-run-id=238698
+
+
+
+
